@@ -171,5 +171,31 @@ fun FormIsi(
         }
     }
 
-
+    if (showDialog) {
+        AlertDialog(
+            onDismissRequest = { showDialog = false },
+            confirmButton = {
+                TextButton(onClick = { showDialog = false }) {
+                    Text("OK", fontWeight = FontWeight.Bold)
+                }
+            },
+            title = {
+                Text(
+                    text = "Data Berhasil Disimpan",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 20.sp
+                )
+            },
+            text = {
+                Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                    Text("Nama : $textNama")
+                    Text("Jenis Kelamin : $textJK")
+                    Text("Status : $textStatus")
+                    Text("Alamat : $textAlamat")
+                }
+            },
+            shape = RoundedCornerShape(16.dp),
+            containerColor = Color.White
+        )
+    }
 }
