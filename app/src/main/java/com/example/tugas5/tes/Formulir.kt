@@ -30,5 +30,54 @@ fun FormIsi(
     val gender = listOf("Laki-laki", "Perempuan")
     val statusPerkawinan = listOf("Janda", "Lajang", "Duda")
 
+    Scaffold(
+        modifier = modifier.fillMaxSize(),
+        bottomBar = {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp),
+                horizontalArrangement = Arrangement.SpaceEvenly
+            ) {
+                OutlinedButton(
+                    onClick = onBerandaClick,
+                    modifier = Modifier
+                        .weight(1f)
+                        .height(50.dp)
+                        .padding(end = 8.dp),
+                    shape = RoundedCornerShape(17.dp),
+                    colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.Gray)
+                ) {
+                    Text(
+                        text = "Beranda",
+                        fontWeight = FontWeight.SemiBold,
+                        fontSize = 18.sp
+                    )
+                }
 
+                Button(
+                    onClick = {
+                        if (textNama.isNotEmpty() && textAlamat.isNotEmpty()
+                            && textJK.isNotEmpty() && textStatus.isNotEmpty()
+                        ) {
+                            showDialog = true
+                        }
+                    },
+                    modifier = Modifier
+                        .weight(1f)
+                        .height(50.dp)
+                        .padding(start = 8.dp),
+                    shape = RoundedCornerShape(20.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF5206D9))
+                ) {
+                    Text(
+                        text = "Submit",
+                        color = Color.White,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 18.sp
+                    )
+                }
+            }
+        }
+    )
 }
