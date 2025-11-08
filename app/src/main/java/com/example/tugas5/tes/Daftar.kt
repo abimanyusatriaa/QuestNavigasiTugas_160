@@ -36,5 +36,15 @@ fun ListPeserta(
         )
     )
 
-
+    Scaffold(
+        modifier = Modifier.fillMaxSize(),
+        bottomBar = {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp),
+                horizontalArrangement = Arrangement.SpaceEvenly
+            )
+        }
+    }
 }
