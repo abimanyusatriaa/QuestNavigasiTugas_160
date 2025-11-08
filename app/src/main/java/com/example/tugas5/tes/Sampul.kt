@@ -47,6 +47,33 @@ fun Sampul(
 
             Spacer(modifier = Modifier.height(100.dp))
 
+            Text(
+                text = "Abimanyu Satria Adji",
+                fontSize = 25.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.Black
+            )
+            Text(
+                text = "20230140160",
+                color = Color.Gray,
+                fontSize = 20.sp
+            )
+        }
 
+        Button(
+            onClick = onMulaiClick,
+            shape = RoundedCornerShape(16.dp),
+            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF5206D9)),
+            modifier = Modifier
+                .fillMaxWidth(0.6f)
+                .height(50.dp)
+        ) {
+            Text(
+                text = "Mulai",
+                color = Color.White,
+                fontWeight = FontWeight.Bold,
+                fontSize = 18.sp
+            )
+        }
     }
 }
