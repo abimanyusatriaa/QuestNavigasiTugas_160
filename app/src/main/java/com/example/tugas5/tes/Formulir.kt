@@ -102,6 +102,74 @@ fun FormIsi(
                 elevation = CardDefaults.cardElevation(10.dp),
                 colors = CardDefaults.cardColors(containerColor = Color.White),
                 modifier = Modifier.fillMaxWidth()
-            )
+            ) {
+                Column(
+                    modifier = Modifier.padding(20.dp),
+                    verticalArrangement = Arrangement.spacedBy(10.dp)
+                ) {
+                    Text("NAMA LENGKAP", fontWeight = FontWeight.SemiBold)
+                    OutlinedTextField(
+                        value = textNama,
+                        onValueChange = { textNama = it },
+                        label = { Text("Masukkan nama lengkap") },
+                        modifier = Modifier.fillMaxWidth()
+                    )
+
+                    Text("JENIS KELAMIN", fontWeight = FontWeight.SemiBold)
+                    Row(
+                        horizontalArrangement = Arrangement.spacedBy(10.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        gender.forEach { item ->
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                modifier = Modifier.selectable(
+                                    selected = textJK == item,
+                                    onClick = { textJK = item }
+                                )
+                            ) {
+                                RadioButton(
+                                    selected = textJK == item,
+                                    onClick = { textJK = item }
+                                )
+                                Text(item)
+                            }
+                        }
+                    }
+
+                    Text("STATUS PERKAWINAN", fontWeight = FontWeight.SemiBold)
+                    Row(
+                        horizontalArrangement = Arrangement.spacedBy(10.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        statusPerkawinan.forEach { item ->
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                modifier = Modifier.selectable(
+                                    selected = textStatus == item,
+                                    onClick = { textStatus = item }
+                                )
+                            ) {
+                                RadioButton(
+                                    selected = textStatus == item,
+                                    onClick = { textStatus = item }
+                                )
+                                Text(item)
+                            }
+                        }
+                    }
+
+                    Text("ALAMAT", fontWeight = FontWeight.SemiBold)
+                    OutlinedTextField(
+                        value = textAlamat,
+                        onValueChange = { textAlamat = it },
+                        label = { Text("Masukkan alamat") },
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                }
+            }
+        }
     }
+
+
 }
