@@ -79,5 +79,29 @@ fun FormIsi(
                 }
             }
         }
-    )
+    ) { paddingValues ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(paddingValues)
+                .verticalScroll(rememberScrollState())
+                .padding(horizontal = 20.dp, vertical = 24.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(
+                text = "Formulir Pendaftaran",
+                color = Color.Black,
+                fontWeight = FontWeight.Bold,
+                fontSize = 22.sp
+            )
+
+            Spacer(modifier = Modifier.height(20.dp))
+
+            Card(
+                shape = RoundedCornerShape(20.dp),
+                elevation = CardDefaults.cardElevation(10.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.White),
+                modifier = Modifier.fillMaxWidth()
+            )
+    }
 }
