@@ -44,7 +44,23 @@ fun ListPeserta(
                     .fillMaxWidth()
                     .padding(16.dp),
                 horizontalArrangement = Arrangement.SpaceEvenly
-            )
-        }
+            ) {
+                OutlinedButton(
+                    onClick = onBerandaClick,
+                    modifier = Modifier
+                        .weight(1f)
+                        .height(50.dp)
+                        .padding(end = 8.dp),
+                    shape = RoundedCornerShape(12.dp),
+                    colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.Gray)
+                ) {
+                    Text(
+                        text = stringResource(id = R.string.beranda),
+                        fontWeight = FontWeight.SemiBold,
+                        fontSize = 18.sp
+                    )
+                }
+
+
     }
 }
