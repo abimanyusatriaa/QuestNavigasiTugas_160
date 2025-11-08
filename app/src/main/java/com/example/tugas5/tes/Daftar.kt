@@ -61,6 +61,23 @@ fun ListPeserta(
                     )
                 }
 
-
-    }
+                Button(
+                    onClick = onFormulirClick,
+                    modifier = Modifier
+                        .weight(1f)
+                        .height(50.dp)
+                        .padding(start = 8.dp),
+                    shape = RoundedCornerShape(17.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF5206D9))
+                ) {
+                    Text(
+                        text = stringResource(id = R.string.formulir),
+                        color = Color.White,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 18.sp
+                    )
+                }
+            }
+        }
+    )
 }
