@@ -35,5 +35,18 @@ fun Sampul(
                 fontSize = 20.sp
             )
 
+            Spacer(modifier = Modifier.height(50.dp))
 
+            Image(
+                painter = painterResource(id = R.drawable.tess),
+                contentDescription = "Logo",
+                modifier = Modifier
+                    .size(300.dp)
+                    .padding(16.dp)
+            )
+
+            Spacer(modifier = Modifier.height(100.dp))
+
+
+    }
 }
