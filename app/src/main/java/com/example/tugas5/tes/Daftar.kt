@@ -20,5 +20,21 @@ import com.example.tugas5.R
 fun ListPeserta(
     onBerandaClick: () -> Unit = {},
     onFormulirClick: () -> Unit = {}
-)
+) {
+    val daftarPeserta = listOf(
+        listOf(
+            Pair(stringResource(id = R.string.nama_lengkap), "Abimanyu"),
+            Pair(stringResource(id = R.string.jenis_kelamin), "Laki-Laki"),
+            Pair(stringResource(id = R.string.status), "Menikah"),
+            Pair(stringResource(id = R.string.alamat), "Yogyakarta")
+        ),
+        listOf(
+            Pair(stringResource(id = R.string.nama_lengkap), "Najwa"),
+            Pair(stringResource(id = R.string.jenis_kelamin), "Perempuan"),
+            Pair(stringResource(id = R.string.status), "Menikah"),
+            Pair(stringResource(id = R.string.alamat), "Malang")
+        )
+    )
+
+
 }
